@@ -2,6 +2,8 @@ var http = module.exports;
 var EventEmitter = require('events').EventEmitter;
 var Request = require('./lib/request');
 
+http.ServerResponse = function(){};
+
 http.request = function (params, cb) {
     if (!params) params = {};
     if (!params.host) params.host = window.location.host.split(':')[0];
